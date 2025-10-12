@@ -35,10 +35,14 @@ jobs:
             f.write(data+'\n')
           'EOF'
 
+      - name: Plot ISS location data
+        run: |
+          uv run --with pandas,matplotlib python plot_iss_location.py
+
       - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add iss-location.jsonl
-          git commit -m "Update ISS position data [skip ci]" || exit 0
+          git add iss-location.jsonl iss_location.png README.md
+          git commit -m "Update ISS position data and plot [skip ci]" || exit 0
           git push

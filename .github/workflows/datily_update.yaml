@@ -21,7 +21,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - name: Commit and Push changes
+      - name: Commit update by 22f3002671@ds.study.iitm.ac.in
         run: |
           git config --local user.email "22f3002671@ds.study.iitm.ac.in"
           git config --local user.name "22f3002671"

@@ -5,3 +5,7 @@
 ## ISS Location Map
 
 ![ISS Location](iss_location.png)
+
+
+## To run server
+- fastapi run server/app.py
